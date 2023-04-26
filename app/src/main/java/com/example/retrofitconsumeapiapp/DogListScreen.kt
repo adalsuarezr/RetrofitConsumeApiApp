@@ -25,6 +25,7 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 
@@ -49,8 +50,9 @@ fun DogListScreen(viewModel: MyViewModel) {
 
 @Composable
 fun MySearchButton(modifier: Modifier, viewModel: MyViewModel) {
+    var context=LocalContext.current
     IconButton(
-        onClick = { viewModel.getDogsByBreed() },
+        onClick = { viewModel.getDogsByBreed(context) },
         modifier.size(54.dp)
     ) {
         Icon(
