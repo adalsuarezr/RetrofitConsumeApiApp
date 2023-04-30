@@ -7,12 +7,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.navigation.compose.rememberNavController
+import com.example.retrofitconsumeapiapp.navigation.AppNavigation
 import com.example.retrofitconsumeapiapp.ui.theme.RetrofitConsumeApiAppTheme
 
 class MainActivity : ComponentActivity() {
-    private var viewModel = MyViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContent {
             RetrofitConsumeApiAppTheme {
@@ -21,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    DogListScreen(viewModel = viewModel)
+                    AppNavigation()
                 }
             }
         }

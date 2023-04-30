@@ -6,5 +6,8 @@ import retrofit2.http.Url
 
 interface ApiService {
     @GET
-    fun getDogsByBreed(@Url url:String): Call<DogResponse>
+    fun getDogsByBreed(@Url url:String): Call<DogImagesResponse>
+
+    @GET
+    fun getDogBreeds(@Url url:String): Call<DogBreedsResponse>
 }
