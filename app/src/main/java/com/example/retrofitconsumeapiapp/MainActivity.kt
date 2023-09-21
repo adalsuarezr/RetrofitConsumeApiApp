@@ -12,6 +12,14 @@ import com.example.retrofitconsumeapiapp.navigation.AppNavigation
 import com.example.retrofitconsumeapiapp.ui.theme.RetrofitConsumeApiAppTheme
 
 class MainActivity : ComponentActivity() {
+//Todo
+// dagger
+// control de errores
+// organizar en packages
+// delegar responsabilidades del viewmodel
+// mejorar las respuestas de los casos de uso
+// cambiar la visualizacion del splash screen
+// mejorar ui
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
